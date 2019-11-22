@@ -8,7 +8,8 @@ pipeline {
 		}
 	stage ("Java execute"){
 		steps {
-			   sh label: '', script: 'javac *.java java Simple'
+			   sh label: '', script: '''javac *.java 
+			   java Simple'''
 			  }
 		}
 	}	
