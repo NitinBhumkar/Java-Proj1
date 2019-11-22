@@ -13,5 +13,4 @@ pipeline{
 			   sh label: '', script: 'javac *.java java Simple'
 			  }
 			}
-		}
-	}
+	}	
