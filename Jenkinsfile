@@ -1,6 +1,12 @@
 pipeline {
 	agent{label 'Master'}
 	stages {
+	stage ("cleanup"){
+		steps {
+			cleanWs()
+buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
+		}
+	}			
 	stage ("SCM Checkout"){
 		steps {
 			   git 'https://github.com/NitinBhumkar/Java-Proj1.git'
