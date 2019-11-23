@@ -1,5 +1,6 @@
 pipeline {
 	agent{label 'Master'}
+echo 'Hello This is beginning of Java script!!'
 	options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
 }
