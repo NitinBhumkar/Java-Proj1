@@ -1,5 +1,8 @@
 pipeline {
 	agent{label 'Master'}
+	options {
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
+}
 	stages {
 	   stage ("SCM Checkout"){
 		steps {
