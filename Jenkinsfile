@@ -17,6 +17,11 @@ buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', d
 			   sh label: '', script: '''javac *.java 
 			   java Simple'''
 			  }
-		}
+			}
+		stage ("Footer"){
+			steps {
+				echo 'Hello!! This is SCM pipeline script running from github'
+			}
+		{
 	}	
 }
