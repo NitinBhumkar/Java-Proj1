@@ -1,10 +1,10 @@
 pipeline {
 	agent{label 'Master'}
-echo 'Hello This is beginning of Java script!!'
 	options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
 }
 	stages {
+	echo 'Hello This is beginning of Java script!!'
 	   stage ("SCM Checkout"){
 		steps {
 			   git 'https://github.com/NitinBhumkar/Java-Proj1.git'
