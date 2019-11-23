@@ -3,8 +3,7 @@ pipeline {
 	stages {
 	stage ("cleanup"){
 		steps {
-			cleanWs()
-			options {
+		   options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
 }
 		}
