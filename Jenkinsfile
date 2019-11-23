@@ -22,6 +22,6 @@ buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', d
 			steps {
 				echo 'Hello!! This is SCM pipeline script running from github'
 			}
-		{
+		}
 	}	
 }
