@@ -23,5 +23,4 @@ pipeline {
 				echo 'Hello!! This is SCM pipeline script running from github'
 			}
 		}
-	}	
-}
+	}
