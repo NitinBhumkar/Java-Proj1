@@ -2,8 +2,7 @@ pipeline {
 	agent{label 'Master'}
 	stages {
 	stage ("cleanup"){
-		steps {
-		   options {
+		options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
 }
 		}
