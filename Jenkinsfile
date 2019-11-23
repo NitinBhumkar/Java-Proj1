@@ -4,7 +4,9 @@ pipeline {
 	stage ("cleanup"){
 		steps {
 			cleanWs()
-buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
+			options {
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
+}
 		}
 	}			
 	stage ("SCM Checkout"){
